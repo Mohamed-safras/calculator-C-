@@ -16,5 +16,17 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private void addNumber(object sender, EventArgs e)
+        {
+            if(textBox1.Text == "0")
+            {
+                textBox1.Clear();
+            }
+            
+            Button button = (Button)sender;
+
+            textBox1.Text += button.Text;
+        }
     }
 }
